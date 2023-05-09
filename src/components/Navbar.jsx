@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = ({ display }) => {
   return (
-    <nav className='navbar navbar-expand-sm navbar-light bg-warning d-flex justify-content-between align-items-center px-5 align-items-center'>
+    <nav className='navbar navbar-expand-sm navbar-light bg-warning d-flex justify-content-between align-items-center px-5 align-items-center fixed-top'>
       <ul className='navbar-nav d-flex align-items-center ml-auto'>
         <li className='nav-item mr-3'>
           <button className='navbar-hamburger' type='button' onClick={display}>

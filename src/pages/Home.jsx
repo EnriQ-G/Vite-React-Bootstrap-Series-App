@@ -9,7 +9,7 @@ function App () {
   const [movies, setMovies] = useState([])
   const APIKEY = import.meta.env.VITE_MB_KEY
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,

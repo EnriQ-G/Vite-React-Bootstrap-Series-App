@@ -5,14 +5,16 @@ import Historial from '../pages/Historial'
 import MiLista from '../pages/MiLista'
 import Peliculas from '../pages/Peliculas'
 import Series from '../pages/Series'
-import Info from '../pages/Info'
+import InfoMovies from '../pages/InfoMovies'
+import InfoSeries from '../pages/InfoSeries'
 
 const RoutesIndex = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/trending' element={<Trending />} />
-      <Route path='/info/:id' element={<Info />} />
+      <Route path='infoMovies/:id' element={<InfoMovies />} />
+      <Route path='infoSeries/:id' element={<InfoSeries />} />
       <Route path='/historial' element={<Historial />} />
       <Route path='/milista' element={<MiLista />} />
       <Route path='/peliculas' element={<Peliculas />} />

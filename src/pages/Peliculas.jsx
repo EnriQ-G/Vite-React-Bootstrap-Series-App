@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import MovieCards from '../components/MovieCards'
+import TrendingCards from '../components/TrendingCards'
 
 const Peliculas = () => {
   const [movies, setMovies] = useState([])
   const APIKEY = import.meta.env.VITE_MB_KEY
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${APIKEY}`)
+    fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${APIKEY}`)
       .then(res => res.json())
       .then(data => {
         // const { data } = results
@@ -16,11 +16,11 @@ const Peliculas = () => {
   }, [])
 
   return (
-    <div className='main-content' style={{ padding: '20px', marginLeft: '220px' }}>
+    <div className='main-content' style={{ padding: '80px', marginLeft: '150px' }}>
 
-      <div className='movie-cards'>
+      <div className='trending-cards-container'>
         {movies.map((movie) => (
-          <MovieCards key={movie.id} {...movie} />
+          <TrendingCards key={movie.id} {...movie} />
         ))}
       </div>
     </div>
