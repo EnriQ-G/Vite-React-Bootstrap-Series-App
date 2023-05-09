@@ -1,4 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+
 body{
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  background-image: url(./assets/wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh; /* or any other fixed height that works for your design */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.navbar-hamburger {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  background-color: orangered;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: orange;
+  cursor: pointer;
+}
+
+.navbar-hamburger:hover {
+  color: #fff;
+  background-color: black;
+}
+
+.navbar-nav li:hover .nav-link:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.container{
+  width: 100%;
+  margin: 1em auto;
+  background-color: darkslategray;
+}
+
+.grid{
+  display: grid;
+  margin-left: .5px;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 0.2em;
+  justify-content: center;
+}
+
+h2{
+  background-color: antiquewhite;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  width: 200px;
+  color: black;
+  left: -200px;
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 1;
+}
+
+.sidebar-header {
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+  background-color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.sidebar-list {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
+
+.sidebar-item {
+  margin-bottom: 10px;
+}
+
+.sidebar-link {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 10px 0;
+}
+
+.sidebar-link:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.sidebar.active {
+  left: 0px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: calc(87% - 14rem - 20px); /* subtract 200px for the sidebar */
+  margin-left: 210px; /* add back the 200px margin for the sidebar */
+  padding: 10px ;
+}
+
+.search-input {
+  flex-grow: 1; /* allow the input to grow to fill the remaining space */
+  font-size: 16px; /* reduce the font size */
+  background-color: orange;
+  border: 3px solid orange;
+  color: black;
+  font-weight: bold;
+  padding:  10px 15px; /* reduce the padding */
+  border-radius: 10px 0px 0px 10px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: orangered;
+  font-weight: bold;
+}
+
+.search-button {
+  background-color: orangered;
+  border: 3px solid orangered;
+  font-size: 16px;
+  font-weight: bold; /* reduce the font size */
+  padding: 10px 15px; /* reduce the padding */
+  border-radius: 0px 10px 10px 0px;
+  color: orange;
+}
+
+.search-button:hover {
+  background-color: orange;
+  color: orangered;
+  cursor: pointer;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.movie-list {
+  margin-top: 20px;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: lightblue;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 10px;
+  max-width: 80%;
+  margin: 0 10px;
+}
+
+.movie-card img {
+  flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #282c34;
+}
+
+.card-text {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: auto;
+  padding: 10px;
+}
+
+.vote-average {
+  margin: 0;
+  font-weight: bold;
+  color: black;
+}
+
+.release-date {
+  margin: 0;
+  font-weight: bold;
+  color: #777;
+}
+
