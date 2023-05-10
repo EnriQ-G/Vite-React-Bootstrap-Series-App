@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-const SearchBar = ({ handleSearch }) => {
+const SearchBar = ({ handleSearch, handleSearchSeries }) => {
   const [search, setSearch] = useState('')
+  const [searchSeries, setSearchSeries] = useState('')
   return (
     <div className='search-bar'>
       <input
@@ -10,14 +11,21 @@ const SearchBar = ({ handleSearch }) => {
         placeholder='Search'
         name='search'
         value={search}
-        onChange={(event) => { setSearch(event.target.value) }}
+        onChange={(event) => {
+          setSearch(event.target.value)
+          setSearchSeries(event.target.value)
+        }}
+
       />
       <button
-        className='search-button'
-        onClick={() => handleSearch(search)}
+        className='search-button' onClick={() => {
+          handleSearch(search)
+          handleSearchSeries(searchSeries)
+        }}
       >
         Buscar
       </button>
+
     </div>
   )
 }

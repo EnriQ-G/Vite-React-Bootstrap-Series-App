@@ -16,7 +16,7 @@ const Peliculas = () => {
   }, [])
 
   return (
-    <div className='main-content' style={{ padding: '80px', marginLeft: '150px' }}>
+    <div className='main-content' style={{ padding: '80px', marginLeft: '200px' }}>
 
       <div className='trending-cards-container'>
         {movies.map((movie) => (

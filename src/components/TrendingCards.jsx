@@ -14,7 +14,7 @@ const TrendingCards = ({ poster_path, vote_average, release_date, overview, name
         <Link to={`/infoSeries/${id}`}>
           <h3 className='card-title'>{name}</h3>
         </Link>
-        <WatchList series={poster_path, vote_average, release_date, overview, name, title, first_air_date, id} />
+        <WatchList series={id} />
         <p className='card-text'>{overview}</p>
         <div className='card-footer'>
           <p className='vote-average'>{vote_average}</p>

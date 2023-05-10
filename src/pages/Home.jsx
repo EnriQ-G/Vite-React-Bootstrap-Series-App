@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 function App () {
   const [movies, setMovies] = useState([])
+  const [series, setSeries] = useState([])
   const APIKEY = import.meta.env.VITE_MB_KEY
   const settings = {
     dots: false,
@@ -26,16 +27,32 @@ function App () {
       }).catch(err => console.log(err))
   }
 
+  const sendSearch1 = (search) => {
+    fetch(`https://api.themoviedb.org/3/search/tv?api_key=${APIKEY}&language=en-US&query=${search}&page=1&include_adult=false`)
+      .then(res => res.json())
+      .then(data => {
+        // const { data } = results
+        console.log(data)
+        setSeries(data.results)
+      }).catch(err => console.log(err))
+  }
+
   return (
     <>
       <h1 />
-      <SearchBar handleSearch={sendSearch} />
+      <SearchBar handleSearch={sendSearch} handleSearchSeries={sendSearch1} />
+      <h1>Peliculas</h1>
       <Slider {...settings}>
         {movies.map((movie) => (
           <MovieCards key={movie.id} {...movie} />
         ))}
       </Slider>
-
+      <h1>Series</h1>
+      <Slider {...settings}>
+        {series.map((series) => (
+          <MovieCards key={series.id} {...series} />
+        ))}
+      </Slider>
     </>
   )
 }

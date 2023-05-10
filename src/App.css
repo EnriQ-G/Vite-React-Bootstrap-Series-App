@@ -258,7 +258,7 @@ h2{
 .trending-card {
   width: 100%;
   margin: 20px;
-  background-color: #fff;
+  background-color: lightseagreen;
   border: 1px solid #ccc;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   padding: 0px
@@ -277,7 +277,7 @@ h2{
 .card-title {
   font-size: 24px;
   font-weight: bold;
-  color: #282c34;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -302,4 +302,123 @@ h2{
 
 .release-date {
   font-size: 16px;
+  color: black;
+}
+
+.main-content {
+  padding: 80px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-page {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.movie-page__poster {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-page__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1e90ff;
+}
+
+.movie-page__tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.movie-page__overview {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.movie-page__vote-average,
+.movie-page__release-date,
+.movie-page__genres,
+.movie-page__runtime,
+.movie-page__status,
+.movie-page__language,
+.movie-page__production-companies,
+.movie-page__budget,
+.movie-page__revenue,
+.movie-page__spoken-languages {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.movie-page__genres,
+.movie-page__production-companies,
+.movie-page__spoken-languages {
+
+  color: #333;
+}
+
+.movie-page__vote-average::before {
+  content: 'Average Rating: ';
+  font-weight: bold;
+}
+
+.movie-page__release-date::before {
+  content: 'Release Date: ';
+  font-weight: bold;
+}
+
+.movie-page__runtime::before {
+  content: 'Runtime: ';
+  font-weight: bold;
+}
+
+.movie-page__status::before {
+  content: 'Status: ';
+  font-weight: bold;
+}
+
+.movie-page__language::before {
+  content: 'Language: ';
+  font-weight: bold;
+}
+
+.movie-page__budget::before {
+  content: 'Budget: ';
+  font-weight: bold;
+}
+
+.movie-page__revenue::before {
+  content: 'Revenue: ';
+  font-weight: bold;
+}
+
+.movie-page__genres::before {
+  content: 'Genres: ';
+  font-weight: bold;
+}
+
+.movie-page__production-companies::before {
+  content: 'Production Companies: ';
+  font-weight: bold;
+}
+
+.movie-page__spoken-languages::before {
+  content: 'Spoken Languages: ';
+  font-weight: bold;
 }

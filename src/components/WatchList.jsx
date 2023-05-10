@@ -1,14 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const WatchList = ({ series }) => {
-  const [watchlist, setWatchlist] = useState([])
-  const addToWatchlist = () => {
-    setWatchlist((prevWatchlist) => [...prevWatchlist, series])
-  }
-
+const WatchList = () => {
   return (
-    <button onClick={addToWatchlist}>
-      {watchlist.includes(series) ? 'Added to Watchlist' : 'Add to Watchlist'}
+    <button>
+      Add to WatchList
     </button>
   )
 }

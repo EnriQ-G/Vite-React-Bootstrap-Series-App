@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
-import Trending from '../pages/Trending'
 import Historial from '../pages/Historial'
 import MiLista from '../pages/MiLista'
 import Peliculas from '../pages/Peliculas'
@@ -12,7 +11,6 @@ const RoutesIndex = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/trending' element={<Trending />} />
       <Route path='infoMovies/:id' element={<InfoMovies />} />
       <Route path='infoSeries/:id' element={<InfoSeries />} />
       <Route path='/historial' element={<Historial />} />
