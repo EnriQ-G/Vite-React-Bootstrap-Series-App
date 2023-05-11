@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const WatchList = () => {
+function WatchList ({ movie, addToFavorites }) {
+  const [liked, setLiked] = useState(false)
+
+  function handleClick () {
+    setLiked(!liked)
+    addToFavorites(movie)
+  }
+
   return (
-    <div>WatchList</div>
+    <button onClick={handleClick}>
+      {liked ? '❤️' : '🤍'}
+    </button>
   )
 }
 
