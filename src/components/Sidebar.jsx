@@ -19,9 +19,6 @@ function Sidebar ({ active }) {
           <Link to='/peliculas' className='sidebar-link'>Peliculas</Link>
         </li>
         <li className='sidebar-item'>
-          <Link to='/historial' className='sidebar-link'>Historial</Link>
-        </li>
-        <li className='sidebar-item'>
           <Link to='/milista' className='sidebar-link'>Mi Lista</Link>
         </li>
       </ul>

@@ -24,9 +24,6 @@ const Navbar = ({ display }) => {
           <NavLink className='nav-link' to='/peliculas'>Peliculas</NavLink>
         </li>
         <li className='nav-item px-2'>
-          <NavLink className='nav-link' to='/historial'>Historial</NavLink>
-        </li>
-        <li className='nav-item px-2'>
           <NavLink className='nav-link' to='/milista'>Mi Lista</NavLink>
         </li>
       </ul>
