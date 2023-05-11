@@ -41,13 +41,17 @@ function App () {
     <>
       <h1 />
       <SearchBar handleSearch={sendSearch} handleSearchSeries={sendSearch1} />
-      <h1>Peliculas</h1>
+      <div style={{ textAlign: 'center' }}>
+        <h1 style={{ backgroundColor: 'orangered', color: 'black', display: 'inline-block' }}>Peliculas</h1>
+      </div>
       <Slider {...settings}>
         {movies.map((movie) => (
           <MovieCards key={movie.id} {...movie} />
         ))}
       </Slider>
-      <h1>Series</h1>
+      <div style={{ textAlign: 'center' }}>
+        <h1 style={{ backgroundColor: 'orangered', color: 'black', display: 'inline-block' }}>Series</h1>
+      </div>
       <Slider {...settings}>
         {series.map((series) => (
           <MovieCards key={series.id} {...series} />
